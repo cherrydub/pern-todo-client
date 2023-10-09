@@ -19,7 +19,7 @@ function App() {
 
   const getData = async () => {
     try {
-      const response = await axios.get(`${serverURL}/${userEmail}`);
+      const response = await axios.get(`${serverURL}/todos/${userEmail}`);
       const data = response.data;
       setTasks(data);
     } catch (err) {
