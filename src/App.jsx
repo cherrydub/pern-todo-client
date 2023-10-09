@@ -7,6 +7,8 @@ import Auth from "./components/Auth";
 import { Toaster, toast } from "sonner";
 import { useCookies } from "react-cookie";
 
+const serverURL = import.meta.env.VITE_SERVERURL;
+
 function App() {
   const [cookies, setCookie, removeCookie] = useCookies(null);
   const [tasks, setTasks] = useState(null);
@@ -17,9 +19,7 @@ function App() {
 
   const getData = async () => {
     try {
-      const response = await axios.get(
-        `http://localhost:8000/todos/${userEmail}`
-      );
+      const response = await axios.get(`${serverURL}/${userEmail}`);
       const data = response.data;
       setTasks(data);
     } catch (err) {
