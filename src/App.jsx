@@ -6,7 +6,7 @@ import axios from "axios";
 import Auth from "./components/Auth";
 import { Toaster, toast } from "sonner";
 import { useCookies } from "react-cookie";
-
+//making sure serverurl updated to vercel one
 const serverURL = import.meta.env.VITE_SERVERURL;
 
 function App() {
