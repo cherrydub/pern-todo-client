@@ -31,7 +31,7 @@ function App() {
     if (authToken) {
       getData();
     }
-  }, []);
+  }, [authToken]);
 
   //sort by date
 
